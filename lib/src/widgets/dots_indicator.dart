@@ -4,6 +4,7 @@ import 'package:velocity_x/velocity_x.dart';
 class DotsIndicator extends StatelessWidget {
   final int length;
   final int current;
+
   const DotsIndicator({
     super.key,
     required this.length,
@@ -21,8 +22,8 @@ class DotsIndicator extends StatelessWidget {
       children: List.generate(
         length,
         (index) => Container(
-          height: Vx.dp10,
-          width: Vx.dp10,
+          height: isActive(index) ? Vx.dp8 : Vx.dp4,
+          width: isActive(index) ? Vx.dp8 : Vx.dp4,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: isActive(index)
