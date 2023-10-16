@@ -3,14 +3,15 @@ import 'package:flutter/material.dart';
 class OtpCodeInput extends StatelessWidget {
   const OtpCodeInput({
     super.key,
-    this.controller,
+    required this.onChanged,
   });
 
-  final TextEditingController? controller;
+  final Function(String?) onChanged;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      onChanged: onChanged,
       textAlign: TextAlign.center,
       decoration: InputDecoration(
         border: OutlineInputBorder(
