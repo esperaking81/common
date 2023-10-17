@@ -16,6 +16,7 @@ class OtpCodeInput extends StatelessWidget {
       textAlign: TextAlign.center,
       onChanged: onChanged,
       maxLength: 1,
+      buildCounter: _emptyCounter,
       decoration: InputDecoration(
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
@@ -26,4 +27,13 @@ class OtpCodeInput extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget? _emptyCounter(
+  BuildContext context, {
+  required int currentLength,
+  required int? maxLength,
+  required bool isFocused,
+}) {
+  return null;
 }
