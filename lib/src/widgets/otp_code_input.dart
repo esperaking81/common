@@ -15,6 +15,7 @@ class OtpCodeInput extends StatelessWidget {
     return TextField(
       textAlign: TextAlign.center,
       onChanged: onChanged,
+      maxLength: 1,
       decoration: InputDecoration(
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
