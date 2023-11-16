@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class OtpCodeInput extends StatelessWidget {
   const OtpCodeInput({
@@ -17,6 +18,9 @@ class OtpCodeInput extends StatelessWidget {
       onChanged: onChanged,
       maxLength: 1,
       buildCounter: _emptyCounter,
+      inputFormatters: [
+        FilteringTextInputFormatter.digitsOnly,
+      ],
       decoration: InputDecoration(
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
