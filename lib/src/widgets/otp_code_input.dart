@@ -18,6 +18,7 @@ class OtpCodeInput extends StatelessWidget {
       onChanged: onChanged,
       maxLength: 1,
       buildCounter: _emptyCounter,
+      keyboardType: TextInputType.phone,
       inputFormatters: [
         FilteringTextInputFormatter.digitsOnly,
       ],
